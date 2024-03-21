@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<title>Estructura HTML</title>
+<script src="script.js"></script>
+<style>
+  body {
+    background-color: #add8e6; /* Celeste */
+    margin: 0;
+    padding: 0;
+    height: 93vh;
+    font-family: "Inter", sans-serif;;
+  }
+  .fila {
+    display: flex;
+    margin: 20px;
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en una fila */
+    height: 100%;
+  }
+  .division-3-4, .division-1-4 {
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Espacio entre las divisiones */
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
+    height: 100%;
+  }
+
+  .division-3-4 {
+    flex: 70%; /* 70% del ancho total */
+    background-color: transparent; /* Gris claro */
+  }
+
+  .division-1-4 {
+    flex: 30%; /* 30% del ancho total */
+    background-color: #e6e6e6; /* Gris más claro */
+  }
+
+  .imagen {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  .descripcion {
+    text-align: center;
+  }
+  .text-area {
+    margin-top: 30px;
+    width: 98%;
+    height: 50vh;
+    border: 0;
+    background-color: transparent;
+    border-radius: 5px;
+    resize: none;
+    padding: 5px;
+  }
+  .botones {
+    display: flex;
+    justify-content: space-between;
+  }
+  .boton {
+    width: 49%; /* Deja un pequeño espacio entre los botones */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    font-size: 16px;
+  }
+
+  .text-area:focus, .text-area:active {
+      outline: none; /* Quita el resaltado del enfoque */
+      /* Agrega cualquier otro estilo de borde que desees */
+  }
+
+  /* Media query para tablet en posición vertical y dispositivos móviles */
+  @media (max-width: 768px) {
+    body{
+      height: auto;
+    }
+    .fila {
+      flex-direction: column; /* Cambiar a disposición de columna */
+    }
+    .division-3-4 {
+      flex: 70%; /* 70% del ancho total */
+      height: auto;
+    }
+    .division-1-4 {
+      flex: 30%; /* 30% del ancho total */
+      height: auto;
+    }
+    .imagen {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="fila">
+  <div class="division-3-4">
+    <div>
+      <img src="image/Logo.png" alt="Logo">
+    </div>
+    <div>
+      <textarea class="text-area" placeholder="Ingresar texto aquí" id="text-user"></textarea>
+    </div>
+    <div>
+      <p>Ingresar solo minúsculas</p>
+    </div>
+    <div class="botones">
+      <button class="boton" onclick="agregarContenido(true)">Encriptar</button>
+      <button class="boton" onclick="agregarContenido(false)">Desencriptar</button>
+    </div>
+  </div>
+  <div class="division-1-4" id="contenido">
+    <div>
+      <img class="imagen" src="image/muneco.png" alt="Imagen">
+    </div>
+    <div class="descripcion">
+      <h1>Ningun mensaje fue encontrado</h1>
+      <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

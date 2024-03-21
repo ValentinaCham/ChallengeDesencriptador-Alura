@@ -1,0 +1,41 @@
+body {
+    margin:0;
+    background-color: lightblue;
+}
+
+.logo-alura{
+    margin: 40px 0 0 40px;
+}
+
+.textarea-input{
+    border: 0;
+    background-color: blue;
+}
+
+.text-encript{
+    background-color: white;
+    width: 400px;
+    height: 944px;
+    margin: 40px 0 0 0;
+    border-radius: 32px;
+}
+
+.center{
+    text-align: center;
+}
+
+.image{
+    width: 336px;
+    margin: 0 auto;
+}
+
+.image img{
+    width: 100%;
+    height: auto;
+
+}
+
+.content-primary{
+    margin: 243px 0 auto 0;
+    box-sizing: border-box
+}
